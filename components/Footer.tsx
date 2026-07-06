@@ -18,14 +18,14 @@ export default function Footer() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/logo-vector.svg"
-                alt="Przytulanka – ikona"
+                alt="PrzytulAnka – ikona"
                 className="h-10 w-auto"
               />
               <span
                 className="font-heading text-xl font-semibold"
                 style={{ color: "var(--color-primary-light)" }}
               >
-                Przytulanka
+                PrzytulAnka
               </span>
             </a>
             <p className="text-xs" style={{ color: "#888" }}>
@@ -53,7 +53,7 @@ export default function Footer() {
           </nav>
 
           <p className="text-xs" style={{ color: "#555" }}>
-            © {year} Przytulanka. Wszelkie prawa zastrzeżone.
+            © {year} PrzytulAnka. Wszelkie prawa zastrzeżone.
           </p>
         </div>
       </div>

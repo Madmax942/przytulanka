@@ -51,7 +51,7 @@ export default function Navigation() {
             className="font-heading font-semibold text-xl tracking-wide hidden sm:block transition-colors duration-500"
             style={{ color: scrolled ? "var(--color-primary-dark)" : "#ffffff" }}
           >
-            Przytulanka
+            PrzytulAnka
           </span>
         </a>
 
