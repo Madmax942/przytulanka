@@ -14,14 +14,22 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
-            <p
-              className="font-heading text-xl font-semibold mb-1"
-              style={{ color: "var(--color-primary-light)" }}
-            >
-              Przytulanka
-            </p>
+            <a href="#" className="flex items-center gap-3 mb-1">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/logo-vector.svg"
+                alt="Przytulanka – ikona"
+                className="h-10 w-auto"
+              />
+              <span
+                className="font-heading text-xl font-semibold"
+                style={{ color: "var(--color-primary-light)" }}
+              >
+                Przytulanka
+              </span>
+            </a>
             <p className="text-xs" style={{ color: "#888" }}>
-              Prywatne Przedszkole · Częstochowa, ul. Gminna 66
+              Prywatne Przedszkole · Częstochowa, ul. Gminna 69
             </p>
           </div>
 

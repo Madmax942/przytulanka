@@ -1,36 +1,14 @@
 import Image from "next/image";
 
 const photos = [
-  {
-    src: "https://images.unsplash.com/photo-1560969184-10fe8719e047?w=800&q=80",
-    alt: "Dzieci podczas zajęć plastycznych",
-    aspect: "tall",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=800&q=80",
-    alt: "Dzieci bawiące się na zewnątrz",
-    aspect: "wide",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1566454419290-57a64afe30ac?w=800&q=80",
-    alt: "Zajęcia edukacyjne w sali",
-    aspect: "square",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1544717305-2782549b5136?w=800&q=80",
-    alt: "Kolorowa sala zabaw",
-    aspect: "wide",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800&q=80",
-    alt: "Dziecko malujące obraz",
-    aspect: "square",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?w=800&q=80",
-    alt: "Plac zabaw dla dzieci",
-    aspect: "tall",
-  },
+  { src: "/galeria/sala-02.jpeg", alt: "Sala z tęczą – stoły edukacyjne i materiały Montessori" },
+  { src: "/galeria/sala-07.jpeg", alt: "Panorama sali zabaw z wiszącymi roślinami i kolumną" },
+  { src: "/galeria/sala-01.jpeg", alt: "Zielona roślina w jasnej sali przedszkolnej" },
+  { src: "/galeria/sala-05.jpeg", alt: "Kącik czytelniczy z regałem, fotelem i kołyską" },
+  { src: "/galeria/sala-03.jpeg", alt: "Sala przedszkolna z globusem i fotelami w kratę" },
+  { src: "/galeria/sala-06.jpeg", alt: "Tipi i wisząca roślina – kącik wyciszenia" },
+  { src: "/galeria/sala-04.jpeg", alt: "Lustro w złotej ramie ze sztalugą i roślinami" },
+  { src: "/galeria/sala-08.jpeg", alt: "Ogródek przedszkolny – dzieci uczą się uprawy" },
 ];
 
 export default function Gallery() {
@@ -62,40 +40,25 @@ export default function Gallery() {
             className="text-base leading-relaxed"
             style={{ color: "var(--color-text-muted)" }}
           >
-            Każdy dzień w Przytulance to nowe doświadczenia, uśmiechy i
-            odkrycia. Zajrzyj, jak wyglądają nasze zajęcia i przestrzeń.
+            Przestrzeń stworzona z myślą o dzieciach – przytulna, pełna zieleni
+            i inspirująca do odkrywania.
           </p>
         </div>
 
-        {/* Masonry-style grid */}
-        <div className="columns-2 md:columns-3 gap-4 space-y-4">
+        {/* Masonry grid – wszystkie zdjęcia są portrait 3:4 */}
+        <div className="columns-2 md:columns-3 lg:columns-4 gap-3 space-y-3">
           {photos.map((photo, i) => (
             <div
               key={i}
-              className="break-inside-avoid rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300"
-              style={{
-                aspectRatio:
-                  photo.aspect === "tall"
-                    ? "3/4"
-                    : photo.aspect === "wide"
-                    ? "4/3"
-                    : "1/1",
-              }}
+              className="break-inside-avoid rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-0.5"
             >
-              <div className="relative w-full h-full" style={{
-                paddingBottom:
-                  photo.aspect === "tall"
-                    ? "133%"
-                    : photo.aspect === "wide"
-                    ? "75%"
-                    : "100%",
-              }}>
+              <div className="relative w-full" style={{ paddingBottom: "133%" }}>
                 <Image
                   src={photo.src}
                   alt={photo.alt}
                   fill
                   className="object-cover hover:scale-105 transition-transform duration-500"
-                  sizes="(max-width: 768px) 50vw, 33vw"
+                  sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                 />
               </div>
             </div>

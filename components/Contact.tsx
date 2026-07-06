@@ -5,22 +5,22 @@ const info = [
   {
     icon: MapPin,
     label: "Adres",
-    lines: ["ul. Gminna 66", "42-200 Częstochowa"],
+    lines: ["ul. Gminna 69", "42-221 Częstochowa"],
   },
   {
     icon: Phone,
     label: "Telefon",
-    lines: ["[numer telefonu]"],
+    lines: ["792-455-166"],
   },
   {
     icon: Mail,
     label: "E-mail",
-    lines: ["[adres e-mail]"],
+    lines: ["przedszkoleprzytulanka.czest@gmail.com"],
   },
   {
     icon: Clock,
     label: "Godziny otwarcia",
-    lines: ["Pon – Pt: 7:00 – 17:00"],
+    lines: ["Pon – Pt: 7:30 – 16:30"],
   },
 ];
 

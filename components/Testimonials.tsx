@@ -2,21 +2,33 @@ import { Star } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Anna Kowalska",
-    role: "Mama Zosi, 4 lata",
-    text: "Zosia chodzi do Przytulaki już drugi rok i jestem zachwycona. Panie są niesamowite – cierpliwe, serdeczne i zaangażowane. Córka co rano wybiega z domu, bo nie może się doczekać przedszkola!",
+    name: "Rodzic",
+    source: "Google",
+    text: "Wspaniałe miejsce – pełne empatii i zrozumienia. System Montessori uczy moją trzylatkę samodzielności i umiejętności rozwiązywania problemów. Małe kameralne grupy, BARDZO oddana i zaangażowana kadra nauczycielska i dyrekcja. Mnóstwo atrakcji w samym przedszkolu jak i poza nim. Miejsce nowiutkie, bardzo dobrze zaopatrzone z własnym placem zabaw. Miejsce godne polecenia!",
     rating: 5,
   },
   {
-    name: "Marcin i Ola Nowak",
-    role: "Rodzice Kuby, 5 lat",
-    text: "Świetne miejsce! Kuba nauczył się tu angielskiego na poziomie, który nas zadziwia. Małe grupy to ogromny plus – panie znają każde dziecko z imienia i naprawdę rozumieją jego potrzeby.",
+    name: "Rodzic",
+    source: "Google",
+    text: "Niepubliczne Przedszkole PrzytulAnka to miejsce godne polecenia. Duże, przestronne, jasne, klimatyzowane, nowoczesne sale. Kameralne grupy. Własne podwórko. Opieka nad dziećmi jest na najwyższym poziomie. Pani Dyrektor jest osobą zaangażowaną i empatyczną. To miejsce tworzone z pasją. Polecam!",
     rating: 5,
   },
   {
-    name: "Katarzyna Wiśniewska",
-    role: "Mama Hani, 3 lata",
-    text: "Hania zaczęła przedszkole z ogromną tremą. Już po tygodniu panie napisały mi, że mała się śmieje i bawi razem z rówieśnikami. Przytulanka to naprawdę wyjątkowe miejsce – polecam z całego serca!",
+    name: "Rodzic",
+    source: "Facebook",
+    text: "Wspaniałe miejsce dla najmłodszych! Jestem zachwycona jeśli chodzi o postępy jakie robi moja córka – nie tylko językowe i edukacyjne, ale również społeczne i rozwojowe. Mega podejście Pań i Dyrekcji, małe grupy, bardzo dobre wyposażenie i program edukacyjny Montessori prowadzone przez wielu specjalistów na miejscu. Bardzo polecam!",
+    rating: 5,
+  },
+  {
+    name: "Rodzic",
+    source: "Google",
+    text: "Zdecydowanie polecam przedszkole. Opieka na najwyższym poziomie. Bogata oferta zajęć. Nowoczesne, bardzo ładnie urządzone sale. Budynek z własnym podwórkiem. Bardzo dobry kontakt z kadrą. Kameralne grupy. Przedszkole godne polecenia, z dużym potencjałem. Polecam :)",
+    rating: 5,
+  },
+  {
+    name: "Rodzic",
+    source: "Facebook",
+    text: "Jesteśmy bardzo zadowoleni. Syn chętnie chodzi do przedszkola i każdego dnia wraca z uśmiechem. Zdecydowanie polecam to miejsce ❤️",
     rating: 5,
   },
 ];
@@ -65,13 +77,24 @@ export default function Testimonials() {
 
         {/* Cards */}
         <div className="grid md:grid-cols-3 gap-6">
-          {testimonials.map(({ name, role, text, rating }) => (
+          {testimonials.map(({ name, source, text, rating }, idx) => (
             <div
-              key={name}
+              key={idx}
               className="p-8 rounded-2xl flex flex-col gap-5"
               style={{ backgroundColor: "var(--color-cream)" }}
             >
-              <Stars count={rating} />
+              <div className="flex items-center justify-between">
+                <Stars count={rating} />
+                <span
+                  className="text-xs font-semibold px-2 py-1 rounded-full"
+                  style={{
+                    backgroundColor: source === "Google" ? "#EA433520" : "#1877F220",
+                    color: source === "Google" ? "#EA4335" : "#1877F2",
+                  }}
+                >
+                  {source}
+                </span>
+              </div>
               <p
                 className="text-sm leading-relaxed flex-1 italic"
                 style={{ color: "var(--color-text-muted)" }}
@@ -83,14 +106,14 @@ export default function Testimonials() {
                   className="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0"
                   style={{ backgroundColor: "var(--color-primary)" }}
                 >
-                  {name.charAt(0)}
+                  R
                 </div>
                 <div>
                   <p className="font-semibold text-sm" style={{ color: "var(--color-text)" }}>
                     {name}
                   </p>
                   <p className="text-xs" style={{ color: "var(--color-text-muted)" }}>
-                    {role}
+                    Zweryfikowana opinia
                   </p>
                 </div>
               </div>

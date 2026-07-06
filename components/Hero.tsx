@@ -6,8 +6,8 @@ export default function Hero() {
       {/* Background image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=1800&q=80"
-          alt="Dzieci bawiące się w przedszkolu"
+          src="https://images.unsplash.com/photo-1649843263763-c7a9e29d5ea2?w=1800&q=80"
+          alt="Dziecko bawiące się drewnianymi klockami"
           fill
           className="object-cover"
           priority
@@ -30,7 +30,7 @@ export default function Hero() {
         >
           Prywatne Przedszkole w Częstochowie
         </p>
-        <h1 className="font-heading text-5xl md:text-7xl font-semibold leading-tight mb-6">
+        <h1 className="font-heading text-4xl sm:text-5xl md:text-7xl font-semibold leading-tight mb-6">
           Miejsce, gdzie dzieci{" "}
           <span style={{ color: "var(--color-primary-light)" }}>
             rozkwitają

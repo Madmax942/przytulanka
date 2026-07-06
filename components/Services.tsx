@@ -1,40 +1,40 @@
-import { BookOpen, Dumbbell, Globe, MessageCircle, Utensils, Music } from "lucide-react";
+import { BookOpen, Dumbbell, Globe, Users, Wind, Home } from "lucide-react";
 
 const services = [
   {
     icon: BookOpen,
-    title: "Zajęcia edukacyjne",
-    desc: "Autorski program nauczania łączący naukę z zabawą – matematyka, przyroda, plastyka i wiele więcej.",
+    title: "Filozofia",
+    desc: "Założenia metody Marii Montessori, Pozytywna Dyscyplina, Rodzicielstwo Bliskości.",
     color: "var(--color-primary)",
   },
   {
     icon: Globe,
-    title: "Język angielski",
-    desc: "Codzienne zajęcia z native speakerem – nauka przez piosenki, gry i naturalne rozmowy.",
+    title: "Nauka poprzez zabawę",
+    desc: "Zajęcia edukacyjne, autorskie programy nauczania, język angielski, zajęcia ogólnorozwojowe oraz pomoc psychologiczno-pedagogiczna (psycholog, pedagog specjalny, terapeuta pedagogiczny i logopeda).",
     color: "var(--color-accent)",
   },
   {
-    icon: Dumbbell,
-    title: "Zajęcia ruchowe",
-    desc: "Rytmika, gimnastyka i zabawy na świeżym powietrzu – zdrowy ruch każdego dnia.",
+    icon: Users,
+    title: "Małe grupy",
+    desc: "Maksymalnie 12 dzieci w grupie – umożliwia to zindywidualizowanie rozwoju każdego dziecka.",
     color: "var(--color-primary-dark)",
   },
   {
-    icon: MessageCircle,
-    title: "Logopedia",
-    desc: "Regularne zajęcia z doświadczonym logopedą – wspieramy prawidłowy rozwój mowy.",
+    icon: Wind,
+    title: "Aromaterapia",
+    desc: "W naszej codziennej pracy wykorzystujemy aromaterapię, bazując na wysokiej jakości olejkach eterycznych marki doTERRA.",
     color: "var(--color-olive)",
   },
   {
-    icon: Music,
-    title: "Zajęcia muzyczne",
-    desc: "Śpiew, taniec i rytmika rozwijają kreatywność i wrażliwość estetyczną maluchów.",
+    icon: Dumbbell,
+    title: "Żadna pogoda nam nie straszna",
+    desc: "Wychodzimy z założenia, że nie ma złej pogody, są tylko nieodpowiednie ubrania. Dlatego dbamy o aktywność na świeżym powietrzu każdego dnia.",
     color: "var(--color-primary)",
   },
   {
-    icon: Utensils,
-    title: "Zdrowe wyżywienie",
-    desc: "Cztery posiłki dziennie przygotowywane ze świeżych produktów przez naszą kucharkę.",
+    icon: Home,
+    title: "Otoczenie",
+    desc: "Estetyczne wnętrza pozbawione nadmiaru zabawek i kolorów, które sprzyjają koncentracji.",
     color: "var(--color-accent)",
   },
 ];
@@ -59,17 +59,16 @@ export default function Services() {
             className="font-heading text-4xl md:text-5xl font-semibold leading-tight mb-6"
             style={{ color: "var(--color-text)" }}
           >
-            Pełna opieka i{" "}
+            Dlaczego{" "}
             <span style={{ color: "var(--color-primary-dark)" }}>
-              wszechstronny rozwój
+              PrzytulAnka?
             </span>
           </h2>
           <p
             className="text-base leading-relaxed"
             style={{ color: "var(--color-text-muted)" }}
           >
-            W Przytulance każdy dzień to nowa przygoda. Oferujemy bogaty
-            program zajęć dopasowany do potrzeb i możliwości każdego dziecka.
+            Z pasją i zaangażowaniem tworzymy miejsce, w którym dzieci mogą się rozwijać i doświadczać – w atmosferze wzajemnego szacunku i bliskości.
           </p>
         </div>
 
