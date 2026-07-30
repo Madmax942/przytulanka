@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Nunito, Playfair_Display } from "next/font/google";
 import "./globals.css";
+import CookieConsent from "@/components/CookieConsent";
 
 const nunito = Nunito({
   variable: "--font-nunito",
@@ -28,7 +29,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pl" className={`${nunito.variable} ${playfair.variable}`}>
-      <body className="min-h-screen">{children}</body>
+      <body className="min-h-screen">
+        {children}
+        <CookieConsent />
+      </body>
     </html>
   );
 }

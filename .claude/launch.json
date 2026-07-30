@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "fitpower",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "/Users/przemyslawsynoradzki/fitpower", "run", "dev"],
+      "port": 3000,
+      "autoPort": true
+    }
+  ]
+}
