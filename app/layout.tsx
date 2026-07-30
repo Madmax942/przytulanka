@@ -20,6 +20,9 @@ export const metadata: Metadata = {
   description:
     "Prywatne przedszkole Przytulanka w Częstochowie. Oferujemy opiekę w małych grupach, indywidualne podejście do dziecka, zajęcia edukacyjne i językowe.",
   keywords: "przedszkole, Częstochowa, prywatne przedszkole, opieka nad dziećmi, Przytulanka",
+  verification: {
+    google: "BaNIaOdv-vfegu0Zs3h3h2w4742DnAduYRb3n7MCkb4",
+  },
 };
 
 export default function RootLayout({
