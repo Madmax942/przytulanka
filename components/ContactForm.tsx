@@ -17,9 +17,19 @@ export default function ContactForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    await new Promise((r) => setTimeout(r, 1200));
-    setLoading(false);
-    setSent(true);
+    try {
+      const res = await fetch("https://formspree.io/f/xyeyljoa", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (!res.ok) throw new Error("error");
+      setSent(true);
+    } catch {
+      alert("Coś poszło nie tak. Spróbuj ponownie lub zadzwoń do nas.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   if (sent) {
